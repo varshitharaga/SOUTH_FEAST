@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@200&display=swap" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet'>
+        <meta name="viewport" content="width-device-width", initial-scale="1.0">
+        <title> Reach Out to Us </title>
+        <link rel="stylesheet" href="contactstyle.css">
+    </head>
+    <body>
+        <div class="container">
+            <form onsubmit="sendEmail(); reset(); return false;">
+                <h3 style="font-family:'Prompt';"> Contact Us </h3>
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="text" id="phone" placeholder="Phone No." required>
+                <textarea id="message" rows="4" placeholder="How can we help you?"></textarea>
+                <button type="submit"> Send</button>
+            </form>
+        </div>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+            function sendEmail()
+            {
+                Email.send({
+                    Host: "smtp.gmail.com",
+                    Username: "neerajnoir@gmail.com", 
+                                                                                                                                                    Password: "pichupikachuraichu",  
+                    To: "neerajnoir@gmail.com", 
+                    From: document.getElementById("email").value,
+                    Subject: "Customer Enquiry",
+                    Body: "Name: " + document.getElementById("name").value
+                    +"<br> Email: " + document.getElementById("email").value
+                    + "<br> Phone no: " + document.getElementById("phone").value
+                    + "<br> Message: " + document.getElementById("message").value
+                }).then(
+                    alert("Message sent successfully")
+                );
+            }
+        </script>
+
+        <style>
+            form input, form textarea, form button{
+                font-family: 'Satisfy';
+            }
+        </style>

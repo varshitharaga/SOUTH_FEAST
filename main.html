@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+<style>
+    .header{
+        margin-top: 0px;
+        width: 100%;
+        padding-top: 10px;
+        position: fixed;
+        top:0;
+        border: none;
+        border-bottom-left-radius: 100px;
+        border-bottom-right-radius: 100px;
+        background-image: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
+        z-index:1;
+    }
+    body{
+        background-image: url(wood.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index:0;
+    }
+    .dropbtn {
+    background-color: rgba(0,0,0,0);    
+    padding: 16px;
+    font-size: 150%;
+    border: none;
+    font-weight: bold;
+    }
+    .dropdown {
+        font-family: ink free;
+        position: relative;
+        display: inline-block;
+    }
+    .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    }
+
+/* Links inside the dropdown */
+    .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    }
+
+/* Change color of dropdown links on hover */
+    .dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+    .dropdown:hover .dropbtn {
+        background-color: rgba(0,0,0,0);
+        
+    }
+    .slide-head{
+        margin-top: 200px;
+        color:rgb(182, 228, 209);
+        font-size: 250%;
+        text-align: center;
+        text-shadow: 2px 2px 15px rgb(53, 227, 76);
+        font-family:Ink Free;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+        
+    }
+    #slides{
+        overflow: hidden;
+        border-width: 10px;
+        border-color: aliceblue;
+        width: 900px;
+        height: 450px;
+        margin-top: 0px;
+    }
+    #slides figure{
+        position: relative;
+        width: 600%;
+        margin:0;
+        left:0;
+        animation: 20s slides infinite;
+    }
+    #slides figure img{
+        float: left;
+        width: 16.666666667%;
+    }
+    @keyframes slides{
+        0% {
+            left:0%;
+        }
+        16% {
+            left: 0;
+        }
+        20% {
+            left: -100%;
+        }
+        36% {
+            left: -100%;
+        }
+        40% {
+            left: -200%;
+        }
+        56% {
+            left: -200%;
+        }
+        60% {
+            left: -300%;
+        }
+        76% {
+            left: -300%;
+        }
+        80% {
+            left: -400%;
+        }
+        96% {
+            left: -400%;
+        }
+        100% {
+            left: -500%;
+        }
+    }
+    .group{
+        padding-left: 50px;
+    }
+    .group h1{
+        font-size: 400%;
+        color:aliceblue;
+        text-shadow: 2px 2px 15px rgb(53, 227, 76);
+        font-family: ink free;
+        
+    }
+    .plate{
+        margin-left: 60px;
+        margin-right: 60px;
+        background-image: url(l-wood.jpeg);
+        border-radius: 100px;
+        height: 500px;
+        padding-top:30px;
+        transition: transform .2s;
+    }
+    .plate:hover{
+        transform: scale(1.15);
+    }
+    .header table td button:hover{
+        transform: scale(1.15);
+        text-shadow: 2px 2px 15px rgb(199, 91, 19);
+    }
+    .logo{
+        transition: transform 1s ease-in-out;
+    }
+    .logo:hover{
+        transform: rotate(360deg);
+    }
+</style>
+<head>
+    <title>South Feast - Land of Spices</title>
+    <script type="text/javascript">
+
+        function OnFocusInput (input) {
+ 
+            input.style.color = "red";
+            input.style.background="beige";
+        }
+ 
+ 
+        function OnBlurInput (input) {
+ 
+            input.style.color = "black"; 
+            input.style.background="aquamarine";
+        }
+ 
+    </script>
+</head>
+<body>
+    <div class="header">
+    <table style="width: 100%;" border="0">
+        <colgroup>
+            <col span="1" style="width: 15.5%;"> 
+            <col span="1" style="width: 3%;">
+            <col span="1">
+            <col span="1" style="width: 3%;">
+            <col span="1">
+            <col span="1" style="width: 3%;">
+            <col span="1">
+            <col span="1" style="width: 5%;">
+            <col span="1">
+            <col span="1" style="width: 3%;">
+            <col span="1" style="width:15%">
+        </colgroup>
+        <tr>
+            <td>
+                <a href="project.html">
+                <img src="logo.png" width="200" height="150" class="logo">
+                </a>
+            </td>
+            <td>
+                <img src="home.png" style="height: 40px;" align="right">
+            </td>
+            <td>
+                <button type="home" formaction="main.html" style="border:none;font-size:150%;background-color:transparent;font-family: ink free;cursor: pointer;"><b>Home</button>
+            </td>
+            <td>
+                <img src="info.png" style="height: 40px;" align="right">
+            </td>
+            <td>
+                <form>
+                <button class="about" formaction="about.html" style="border:none;font-size:150%;background-color:transparent;font-family: ink free;text-align: left;cursor: pointer;"><b>About us</button>
+                </form>
+            </td>
+            <td>
+                <img src="recip.png" style="height: 40px;" align="right">
+            </td>
+            <td>
+                <div class="dropdown">
+                    <button class="dropbtn" style="font-family: ink free;">Recipes</button>
+                    <div class="dropdown-content">
+                      <a href="#tiff">Tiffin</a>
+                      <a href="#curry">Curries</a>
+                      <a href="#seaf">Sea Food</a>
+                      <a href="#chick">Chicken Specials</a>
+                      <a href="#mutt">Mutton Specials</a>
+                      <a href="#saj">Snacks and Juices</a>
+                      <a href="#sweet">Sweets</a>
+                    </div>
+                  </div>.
+            </td>
+            <td>
+                <img src="health.png" style="height: 40px;" align="right">
+            </td>
+            <td>
+                <form>
+                    <button class="health" formaction="health.html" style="border:none;font-size:150%;background-color:transparent;font-family: ink free;cursor: pointer;"><b>Health & Diet</button>
+                </form>
+            </td>
+            <td>
+                <label for="search-input"><img src="search.png" style="height: 40px;" align="right"></label>
+            </td>
+            <td>
+                <input type="text" id="search-input" placeholder="Search Here" style="font-size:125%;border-radius: 25px; width:92.5%;font-family: ink free;"  onfocus="OnFocusInput (this)" onblur="OnBlurInput (this)">
+            </td>
+        </tr>
+    </table>
+    </div>
+    <br>
+    <div class="slide-head"> 
+        <p><b>Regional Specialties : <b></p>
+    </div>
+
+    <script>
+        // Sample food data
+        const foodItems = [
+          { name: 'Masala Dosa', page: 'mdosa.html' },
+          { name: 'Medu Vada', page: 'MeduVada.html' },
+          { name: 'Uttapam', page: 'uttapam.html' },
+          { name: 'Mysore Pak', page: 'mysorepak.html' },
+          { name: 'Chepala Pulusu', page: 'chepala.html' },
+          { name: 'Tomato Rasam', page: 'trasam.html' },
+          { name: 'Mutton Curry', page: 'mutton.html' },
+          { name: 'Rasagulla', page: 'rasagulla.html' },
+          { name: 'Guttivankaya Curry', page: 'gutti.html' },
+          { name: 'Mango Juice', page: 'MangoShake.html' },
+          { name: 'Prawns Curry', page: 'prawncurry.html' },
+          { name: 'Murukku', page: 'murk.html' },
+    
+        ];
+    
+        function searchFoodItem(itemName) {
+
+          const searchQuery = itemName.toLowerCase();
+    
+          const foundItem = foodItems.find(item =>
+            item.name.toLowerCase() === searchQuery
+          );
+    
+
+          if (foundItem) {
+            window.location.href = foundItem.page;
+          } else {
+            alert('Item not found.');
+          }
+        }
+    
+        function handleSearchQuery(event) {
+          if (event.key === 'Enter') {
+            const searchInput = document.getElementById('search-input');
+            const searchQuery = searchInput.value;
+    
+            searchFoodItem(searchQuery);
+          }
+        }
+    
+        const searchInput = document.getElementById('search-input');
+        searchInput.addEventListener('keydown', handleSearchQuery);
+      </script>
+
+
+    <center>
+    <div id="slides">
+        <figure>
+            <a href="mdosa.html"><img src="m-dosa22.jpeg"> </a>`
+            <img src="parotta.jpeg">
+            <a href="MeduVada.html"><img src="uzhuvada.jpeg"></a>
+            <img src="pongal.jpg">
+            <img src="dumb.jpg">
+            <a href="mdosa.html"><img src="m-dosa22.jpeg"> </a>
+        </figure>
+    </div>
+    </center>
+    <br><br>
+    <hr style="width: 80%;height: 10px;border-radius: 100px;background-image: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));">
+    <h1  id="tiff" style="font-family:Ink Free;font-size: 500%;color: rgb(182, 228, 209);text-align: center;padding-top: 75px;text-shadow: 2px 2px 15px rgb(53, 227, 76);padding-bottom: 50px;"><u>Recipes</u></h1>
+
+    <div class="group">
+        <h1>Tiffins : </h1>
+        <table width="100%" border="0" style="border-color: white;border-style: solid;border-spacing: 0px 75px;">
+            <colgroup>
+                <col span="1" width="50%">
+                <col span="1" width="50%">
+            </colgroup>
+            <tr>
+                <td>
+                    <center>
+                    <div class="plate"><a href="mdosa.html" style="color: inherit;text-decoration: none;">
+                        <img src="m-dosa.jpeg" width="40%">
+                        <p style="margin-top:10px;margin-bottom:20px;font-size: 250%;color:rgb(3, 60, 3);text-shadow: 2px 2px 15px rgb(53, 227, 76)">Masala Dosa</p>
+                        <p id="curry" style="font-size:125%">One of the most popular South Indian dishes, originating<br>from Udupi, Karnataka.<br>
+                            Crisp, aromatic, flavourful and has a potato masala or<br>spiced seasoned potatoes stuffed in it that would<br>leave you wanting more.</p>
+                    </a></div>
+                    </center>
+                </td>
+                <td>
+                    <center>
+                        <div class="plate"><a href="uttapam.html" style="color: inherit;text-decoration: none;">
+                            <img src="utttttapam.jpeg" width="50%">
+                            <p style="margin-top:10px;margin-bottom:20px;font-size: 250%;color:rgb(3, 60, 3);text-shadow: 2px 2px 15px rgb(53, 227, 76)">Uttapam</p>
+                            <p id="seaf" style="font-size:125%"></p>
+                        </a></div>
+                    </center>
+                </td>
+            </tr>
+        </table >
+        <hr style="margin-top:0px;width: 60%;height: 3px;border-radius: 100px;background-image: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));">
+    </div><br>
+
+    <div class="group">
+        <h1>Curries : </h1>
+        <table width="100%" border="0" style="border-color: white;border-style: solid;border-spacing: 0px 75px;">
+            <colgroup>
+                <col span="1" width="50%">
+                <col span="1" width="50%">
+            </colgroup>
+            <tr>
+                <td>
+                    <center>
+                    <div class="plate"><a href="gutti.html" style="color: inherit;text-decoration: none;">
+                        <img src="guttivankaya.jpg" width="50%">
+                        <p style="margin-top:10px;margin-bottom:20px;font-size: 250%;color:rgb(3, 60, 3);text-shadow: 2px 2px 15px rgb(53, 227, 76)">Guttivankaya</p>
+                        <p id="seaf" style="font-size:125%">The Guttivankaya curry,<br> which is renowned for its spice level and creamy,<br>
+                            peanut-based base is one such wildly famous spicy gravy.</p>
+                    </a></div>
+                    </center>
+                </td>
+                <td>
+                    <center>
+                        <div class="plate"><a href="tomatorasam.html" style="color: inherit;text-decoration: none;">
+                            <img src="trasam.jpeg" width="50%">
+                            <p style="margin-top:10px;margin-bottom:20px;font-size: 250%;color:rgb(3, 60, 3);text-shadow: 2px 2px 15px rgb(53, 227, 76)">Thakkali Rasam</p>
+                            <p id="seaf" style="font-size:125%">Also called Tomato Rasam</p>
+                        </a></div>
+                    </center>
+                </td>
+            </tr>
+        </table>
+        <hr style="width: 60%;height: 3px;border-radius: 100px;background-image: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));">
+    </div><br>
+
+    <div class="group">
+        <h1>Sea Food : </h1>
+        <table width="100%" border="0" style="border-color: white;border-style: solid;border-spacing: 0px 75px;">
+            <colgroup>
+                <col span="1" width="50%">
+                <col span="1" width="50%">
+            </colgroup>
+            <tr>
+                <td>
+                    <center>
+                    <div class="plate"><a href="chepala.html" style="color: inherit;text-decoration: none;">
+                        <img src="fish-curry.jpg" width="40%">
+                        <p style="margin-top:10px;margin-bottom:20px;font-size: 250%;color:rgb(3, 60, 3);text-shadow: 2px 2px 15px rgb(53, 227, 76)">Chepala Pulusu</p>
+                        <p id="sweet" style="font-size:125%">Chepala pulusu is a spicy and tangy popular andhra style fish curry,especially in the district of nellore</p>
+                    </a></div>
+                    </center>
+                </td>
+                <td>
+                    <center>
+                        <div class="plate"><a href="prawncurry.html" style="color: inherit;text-decoration: none;">
+                            <img src="prawn.jpeg" width="50%">
+                            <p style="margin-top:10px;margin-bottom:20px;font-size: 250%;color:rgb(3, 60, 3);text-shadow: 2px 2px 15px rgb(53, 227, 76)">Prawn Masala</p>
+                            <p id="seaf" style="font-size:125%"></p>
+                        </a></div>
+                    </center>
+                </td>
+            </tr>
+        </table>
+        <hr style="width: 60%;height: 3px;border-radius: 100px;background-image: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));">
+    </div><br>
+
+    <div class="group">
+        <h1>Snacks and Juices : </h1>
+        <table width="100%" border="0" style="border-color: white;border-style: solid;border-spacing: 0px 75px;">
+            <colgroup>
+                <col span="1" width="50%">
+                <col span="1" width="50%">
+            </colgroup>
+            <tr>
+                <td>
+                    <center>
+                        <div class="plate"><a href="murk.html" style="color: inherit;text-decoration: none;">
+                            <img src="murukku.jpeg" width="50%">
+                            <p style="margin-top:10px;margin-bottom:20px;font-size: 250%;color:rgb(3, 60, 3);text-shadow: 2px 2px 15px rgb(53, 227, 76)">Murukku</p>
+                            <p id="seaf" style="font-size:125%"></p>
+                        </a></div>
+                    </center>
+                </td>
+                <td>
+                    <center>
+                        <div class="plate"><a href="MangoShake.html" style="color: inherit;text-decoration: none;">
+                            <img src="mshake.jpeg" width="50%">
+                            <p style="margin-top:10px;margin-bottom:20px;font-size: 250%;color:rgb(3, 60, 3);text-shadow: 2px 2px 15px rgb(53, 227, 76)">Mango Milkshake</p>
+                            <p id="seaf" style="font-size:125%"></p>
+                        </a></div>
+                    </center>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <center>
+                        <div class="plate"><a href="MeduVada.html" style="color: inherit;text-decoration: none;">
+                            <img src="medu.jpeg" width="50%">
+                            <p style="margin-top:10px;margin-bottom:20px;font-size: 250%;color:rgb(3, 60, 3);text-shadow: 2px 2px 15px rgb(53, 227, 76)">Medu Vada</p>
+                            <p id="seaf" style="font-size:125%"></p>
+                        </a></div>
+                    </center>
+                </td>
+            </tr>
+        </table>
+        <hr style="width: 60%;height: 3px;border-radius: 100px;background-image: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));">
+    </div><br>
+
+    <div class="group">
+        <h1>Sweets : </h1>
+        <table width="100%" border="0" style="border-color: white;border-style: solid;border-spacing: 0px 75px;">
+            <colgroup>
+                <col span="1" width="50%">
+                <col span="1" width="50%">
+            </colgroup>
+            <tr>
+                <td>
+                    <center>
+                    <div class="plate"><a href="rasagulla.html" style="color: inherit;text-decoration: none;">
+                        <img src="rasgulla.jpg" width="40%">
+                        <p style="margin-top:10px;margin-bottom:20px;font-size: 250%;color:rgb(3, 60, 3);text-shadow: 2px 2px 15px rgb(53, 227, 76)">Rasgulla</p>
+                        <p id="curry" style="font-size:125%">A syrupy desert,<br>made from dumblings of chenna dough.<br>It is especially famous in Kerala.</p>
+                    </a></div>
+                    </center>
+                </td>
+                <td>
+                    <center>
+                        <div class="plate"><a href="mysorepak.html" style="color: inherit;text-decoration: none;">
+                            <img src="mpak.jpg" width="50%">
+                            <p style="margin-top:10px;margin-bottom:20px;font-size: 250%;color:rgb(3, 60, 3);text-shadow: 2px 2px 15px rgb(53, 227, 76)">Mysore Pak</p>
+                            <p id="seaf" style="font-size:125%"></p>
+                        </a></div>
+                    </center>
+                </td>
+            </tr>
+        </table >
+        <hr style="margin-top:0px;width: 60%;height: 3px;border-radius: 100px;background-image: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));">
+    </div><br>
+    
+    
+</body>
+</html> 

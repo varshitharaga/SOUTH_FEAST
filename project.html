@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        img{display: block;margin-left: auto;margin-right: auto;}
+        button{
+            margin-top: 15px;margin-left: 500px;color:white;border: none;font-size: 300%; border:none;background-color:transparent;
+            font-family: ink free;
+            
+            font-weight: bold;
+            
+        }
+        h1 {
+    margin: 0;
+    padding: 0;
+    color: #111;
+    font-size: 10em;
+    text-shadow: 2px 2px 15px rgb(53, 227, 76);
+}
+img{
+   transition: transform .2s
+}
+img:hover{
+    transform: scale(1.1);
+}
+.hover14 figure {
+	position: relative;
+}
+.hover14 figure::before {
+	position: absolute;
+	top: 0;
+	left: -75%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 50%;
+	height: 100%;
+	background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	-webkit-transform: skewX(-25deg);
+	transform: skewX(-25deg);
+}
+.hover14 figure:hover::before {
+	-webkit-animation: shine .75s;
+	animation: shine .75s;
+}
+@-webkit-keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+@keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+.glow{
+    transition: transform .2s;
+}
+.glow:hover{
+    transform: scale(1.25);
+}
+h3 span {
+    display: table-cell;
+    margin: 0;
+    padding: 0;
+    animation: animate 2s linear infinite;
+}
+h3 span:nth-child(1) {
+    animation-delay: 0s;
+}
+h3 span:nth-child(2) {
+    animation-delay: .2s;
+}
+h3 span:nth-child(3) {
+    animation-delay: .4s;
+}
+h3 span:nth-child(4) {
+    animation-delay: .6s;
+}
+h3 span:nth-child(5) {
+    animation-delay: 0.6s;
+}
+h3 span:nth-child(6) {
+    animation-delay: 0.8s;
+}
+h3 span:nth-child(7) {
+    animation-delay: 1s;
+}
+h3 span:nth-child(8) {
+    animation-delay: 1.2s;
+}
+h3 span:nth-child(9) {
+    animation-delay: 1.4s;
+}
+h3 span:nth-child(10) {
+    animation-delay: 1.6s;
+}
+h3 span:nth-child(11) {
+    animation-delay: 1.8s;
+}
+h3 span:nth-child(12) {
+    animation-delay: 2s;
+}
+
+@keyframes animate {
+    0%, 100% {
+        color: #14c3d0;
+        filter: blur(0px);
+        text-shadow: 0 0 10px rgb(136, 224, 147),
+                     0 0 20px rgb(138, 219, 149),
+                     0 0 40px rgb(81, 226, 101),
+                     0 0 60px rgb(53, 227, 76),
+                     0 0 80px rgb(35, 228, 61),
+                     0 0 100px rgb(211, 227, 213),
+                     0 0 120px rgb(154, 222, 163),
+                     0 0 140px rgb(92, 209, 108),
+                     0 0 160px rgb(65, 231, 87),
+                     0 0 180px rgb(53, 227, 76), 
+                     0 0 200px rgb(30, 241, 58);   
+    }
+    20%, 80% {
+        color: rgb(220, 148, 124);
+        filter: blur(0px);
+        text-shadow: none; 
+    }
+}
+    </style>
+    <head>
+        <title>Welcome!</title>
+        <linkrel="stylesheet" href="border_1.css">
+    </head>
+    <div class="hover14 column">
+    <div>
+        <figure>
+    <img src="logo.png" width="500" height="300">
+        </figure>
+    </div>
+    </div>
+    <br>
+    
+    <body background="bg.jpeg" style="background-repeat: no-repeat;background-size: cover;"></body>
+    <h1 style="padding-left:1.5%;font-size:300%;font-family:sans-serif ;color:lightgreen;font-family:Ink free,cursive;margin-left: 360px;">Hey foodies!! Start your food journey...</h1>
+    <form>
+        <button type="get started" formaction="main.html" style="padding-left: 5%;cursor: pointer;" >
+            <div class="glow">
+                <h3>
+                    <span>G</span>
+                    <span>e</span> 
+                    <span>t</span>
+                    <span>&nbsp;</span>
+                    <span>S</span>
+                    <span>t</span>
+                    <span>a</span>
+                    <span>r</span>
+                    <span>t</span>      
+                    <span>e</span>
+                    <span>d</span>
+                    <span>!</span>
+                </h3>
+            </div>
+        </button>
+    </form>
+</html>
